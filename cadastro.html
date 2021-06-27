@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title>Cadastro de Anuncio</title>
@@ -7,27 +8,41 @@
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="index.css">
+    <script src="/calculadora.js" defer type="module"></script>
+
 
 
 </head>
 
+
 <body>
     <div class="novocadastro">
-        <form action="" method="">
-            <input type="text" title="Nome do anúncio" name="nome-anuncio" id="nome-anuncio"
-                placeholder="Digite o nome do anúncio">
-            <input type="text" title="Nome do Cliente" name="cliente" id="cliente" placeholder="Digite o cliente">
-            <input type="date" title="Data de início" name="data-inicio" id="data-inicio">
-            <input type="date" title="Data de término" name="data-fim" id="data-fim">
-            <input type="number" title="Investimento por dia em reais" name="investimento-d" id="investimento-d"
+        <form id="cadastro">
+            <label for-id="nome-anuncio">Nome do anúncio</label>
+            <input type="text" name="nome-anuncio" id="nome-anuncio" placeholder="Digite o nome do anúncio">
+
+            <label for-id="cliente">Nome do Cliente</label>
+            <input type="text" name="cliente" id="cliente" placeholder="Digite o cliente">
+
+            <label for-id="data-inicio">Data de início</label>
+            <input type="date" name="data-inicio" id="data-inicio">
+
+            <label for-id="data-fim">Data de término</label>
+            <input type="date" name="data-fim" id="data-fim">
+
+            <label for-id="investimento-d">Investimento por dia em reais</label>
+            <input type="number" name="investimento-d" id="investimento-d" class="test"
                 placeholder="Digite o valor investido por dia">
 
-            <button>Cadastrar</button>
+            <input type="submit" value="Cadastrar">
         </form>
     </div>
+
 
     <a href="/index.html">
         <button>Voltar para início</button>
     </a>
 
 </body>
+
+</html>

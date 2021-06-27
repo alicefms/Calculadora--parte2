@@ -1,0 +1,6 @@
+.novocadastro form {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}

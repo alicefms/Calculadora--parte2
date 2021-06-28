@@ -1,4 +1,4 @@
-let reais = 15
+let reais = 0
 let views = 0
 let clicks = 0
 let compartilhamentos = 0

@@ -8,7 +8,7 @@ let compaTotais = 0
 let clicksTotais = 0
 let share = 0
 
-function calculadora(view) {
+function calculaloop(view) {
 
     clicks = Math.floor(12 / 100 * view)
     compartilhamentos = Math.floor(3 / 20 * clicks)
@@ -26,7 +26,7 @@ function geraRelatorio(valor) {
 
     do {
         if (share < 3) {
-            views = calculadora(views)
+            views = calculaloop(views)
         }
 
         share = share + 1
@@ -45,4 +45,13 @@ function geraRelatorio(valor) {
     `)
 }
 
+function imprimeRelatorio() {
+    document.getElementById('reais').innerHTML = `${reais}`
+    document.getElementById('viewsTotais').innerHTML = `${viewsTotais}`
+    document.getElementById('clicksTotais').innerHTML = `${clicksTotais}`
+    document.getElementById('compaTotais').innerHTML = `${compaTotais}`
+}
 
+
+geraRelatorio(10)
+imprimeRelatorio()

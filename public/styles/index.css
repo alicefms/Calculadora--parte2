@@ -4,3 +4,43 @@
     justify-content: center;
     width: 60%;
 }
+
+* {
+    font-family:'Courier New', Courier, monospace;
+    background:#fbf3e6;
+}
+body{
+    margin: 20px;
+}
+
+header{
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 30px;
+   
+}
+
+button, .submit {
+    background: rgb(136, 136, 248);
+    font-size: 16px;
+
+}
+
+.texto p{
+    font-size: 40px;
+    text-align: center;
+    
+}
+
+input{
+    background: white;
+    margin-bottom: 20px;
+}
+.novocadastro{
+   
+    align-items: center;
+    justify-content: center;
+}
+.novocadastro p{
+    font-size: 30px;
+}

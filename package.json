@@ -1,5 +1,5 @@
 {
-  "name": "DivulgaTudo",
+  "name": "divulgatudo",
   "version": "1.0.0",
   "description": "Projeto desenvolvido como requisito para uma seleção da Capgemini",
   "main": "src/server.js",

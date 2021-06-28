@@ -20,7 +20,7 @@ function calculadora(view) {
     return maisviews
 }
 
-function geraRelatorio (valor){
+function geraRelatorio(valor) {
     views = 30 * valor
     viewsTotais = views
 
@@ -28,48 +28,21 @@ function geraRelatorio (valor){
         if (share < 3) {
             views = calculadora(views)
         }
-    
+
         share = share + 1
-    
+
         if (share == 3) break
     } while (compartilhamentos >= 1)
-    
+
     clicksTotais = clicksTotais + Math.floor(12 / 100 * views)
+
+    console.log(` 
+    CALCULADORA RODANDO
+    Valor Investido = ${reais}
+    Total de Views = ${viewsTotais}
+    Total de Clicks = ${clicksTotais}
+    Total de Compartilhamentos = ${compaTotais}
+    `)
 }
 
 
-
-var form = document.getElementById('cadastro')
-var invest = document.querySelector('.test')
-
-form.addEventListener('submit', function (e) {
-    
-    e.preventDefault();
-    reais = invest.value
-   geraRelatorio(reais)
-
-   console.log(` 
-Valor Investido = ${reais}
-Total de Views = ${viewsTotais}
-Total de Clicks = ${clicksTotais}
-Total de Compartilhamentos = ${compaTotais}
-`)
-})
-
-
-
-
-
-
-
-
-
-
-
-// document.getElementById('reais').innerHTML = `${reais}`
-// document.getElementById('viewsTotais').innerHTML = `${viewsTotais}`
-// document.getElementById('clicksTotais').innerHTML = `${clicksTotais}`
-// document.getElementById('compaTotais').innerHTML = `${compaTotais}`
-
-
- 

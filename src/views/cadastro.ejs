@@ -14,27 +14,31 @@
 
 </head>
 
+<header>
+    Divulga Tudo
+</header>
 
 <body>
     <div class="novocadastro">
-        <form id="cadastro" action="">
-            <label for-id="nome-anuncio">Nome do anúncio</label>
-            <input type="text" name="nome-anuncio" id="nome-anuncio" placeholder="Digite o nome do anúncio">
+        <p> Cadastro de Novo Anúncio</p>
+        <form id="cadastro" action="#" method="POST">
+            <label for-id="nomeanuncio">Nome do anúncio</label>
+            <input type="text" name="nomeanuncio" id="nomeanuncio" placeholder="Digite o nome do anúncio">
 
             <label for-id="cliente">Nome do Cliente</label>
             <input type="text" name="cliente" id="cliente" placeholder="Digite o cliente">
 
             <label for-id="data-inicio">Data de início</label>
-            <input type="date" name="data-inicio" id="data-inicio">
+            <input type="date" name="datainicio" id="datainicio">
 
             <label for-id="data-fim">Data de término</label>
-            <input type="date" name="data-fim" id="data-fim">
+            <input type="date" name="datafim" id="datafim">
 
             <label for-id="investimento-d">Investimento por dia em reais</label>
-            <input type="number" name="investimento-d" id="investimento-d" class="test"
+            <input type="number" name="investimentod" id="investimentod" class="test"
                 placeholder="Digite o valor investido por dia">
 
-            <input type="submit" value="Cadastrar">
+            <input type="submit" class="submit" value="Cadastrar">
         </form>
     </div>
 

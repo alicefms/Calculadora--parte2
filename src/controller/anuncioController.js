@@ -1,7 +1,7 @@
-//const Database = require('../db/config')
+const Database = require('../db/config')
 
 module.exports = {
-    criar(req, res) {
+    async criar(req, res) {
         const db = await Database()
         const titulo = req.body.nomeanuncio
         const cliente = req.body.cliente
@@ -9,22 +9,22 @@ module.exports = {
         const datafim = req.body.datafim
         const investimentod = req.body.investimentod
 
-        // await db.run(`INSERT INTO anuncios (
-        //     titulo,
-        //     cliente,
-        //     datainicio,
-        //     datafim,
-        //     investimentod
-        // ) VALUES (
-        //     "${titulo}",
-        //     "${cliente}",
-        //     "${datainicio}",
-        //     "${datafim}",
-        //     ${investimentod}
-        // )`)
 
+        await db.run(`INSERT INTO anuncios (
+            titulo,
+            cliente,
+            datainicio,
+            datafim,
+            investimentod
+        ) VALUES (
+            "${titulo}",
+            "${cliente}",
+            "${datainicio}",
+            "${datafim}",
+            ${investimentod}
+        )`)
 
-        console.log(`${titulo}, ${cliente}, ${datafim}, ${investimentod}`)
+        res.render('index')
 
     }
 }

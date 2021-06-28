@@ -2,7 +2,7 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    
 }
 
 * {
@@ -17,13 +17,21 @@ header{
     font-size: 20px;
     font-weight: 900;
     margin-bottom: 30px;
+    background: rgb(247, 139, 139);
    
 }
 
 button, .submit {
     background: rgb(136, 136, 248);
     font-size: 16px;
+    border-radius: 8px;
 
+}
+.texto{
+    
+  align-items: center;
+  padding: 60px;
+  
 }
 
 .texto p{
@@ -43,4 +51,14 @@ input{
 }
 .novocadastro p{
     font-size: 30px;
+   text-align: center;
+}
+
+.voltar{
+    position: fixed;
+    bottom: 50px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
 }

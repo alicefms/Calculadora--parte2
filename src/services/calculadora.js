@@ -1,4 +1,3 @@
-let reais = 0
 let views = 0
 let clicks = 0
 let compartilhamentos = 0
@@ -20,7 +19,7 @@ function calculaloop(view) {
     return maisviews
 }
 
-function geraRelatorio(valor) {
+const geraRelatorio = (valor, qtedias) => {
     views = 30 * valor
     viewsTotais = views
 
@@ -36,22 +35,8 @@ function geraRelatorio(valor) {
 
     clicksTotais = clicksTotais + Math.floor(12 / 100 * views)
 
-    console.log(` 
-    CALCULADORA RODANDO
-    Valor Investido = ${reais}
-    Total de Views = ${viewsTotais}
-    Total de Clicks = ${clicksTotais}
-    Total de Compartilhamentos = ${compaTotais}
-    `)
+    const investimetoTotal = qtedias * valor
+    return { viewsTotais, clicksTotais, compaTotais, investimetoTotal }
 }
 
-function imprimeRelatorio() {
-    document.getElementById('reais').innerHTML = `${reais}`
-    document.getElementById('viewsTotais').innerHTML = `${viewsTotais}`
-    document.getElementById('clicksTotais').innerHTML = `${clicksTotais}`
-    document.getElementById('compaTotais').innerHTML = `${compaTotais}`
-}
-
-
-geraRelatorio(10)
-imprimeRelatorio()
+module.exports = geraRelatorio

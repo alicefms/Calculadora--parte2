@@ -2,7 +2,13 @@ const Database = require('../db/config')
 var moment = require('moment');
 moment().format();
 
+const geraRelatorio = require('../services/calculadora')
+
+
 module.exports = {
+
+
+
     async criar(req, res) {
         const db = await Database()
         const titulo = req.body.nomeanuncio
@@ -14,12 +20,19 @@ module.exports = {
         const d2 = moment(datafim, "YYYY-MM-DD")
         const qtedias = moment.duration(d2.diff(d1)).asDays();
 
+        const { viewsTotais, clicksTotais, compaTotais, investimetoTotal } = geraRelatorio(investimentod, qtedias)
+
         console.log(` "${titulo}",
         "${cliente}",
         "${datainicio}",
         "${datafim}",
         ${investimentod},
-        ${qtedias}`)
+        ${qtedias},
+        ${viewsTotais},
+        ${compaTotais},
+        ${investimetoTotal}
+        
+       `)
 
 
         await db.run(`INSERT INTO anuncios (
@@ -27,17 +40,36 @@ module.exports = {
             cliente,
             datainicio,
             datafim,
-            investimentod
+            investimentod, 
+            qtedias,
+            viewstotais,
+            clickstotais,
+            compartilhamentostotais,
+            investimentototal
         ) VALUES (
             "${titulo}",
             "${cliente}",
             "${datainicio}",
             "${datafim}",
-            ${investimentod}
+            ${investimentod},
+            ${qtedias},
+            ${viewsTotais},
+            ${clicksTotais},
+            ${compaTotais},
+            ${investimetoTotal}
         )`)
         db.close()
         res.render('index')
+    },
+
+    async buscar(req, res) {
+        const db = await Database()
+        const anuncios = await db.all(`SELECT * FROM anuncios`)
+
+        res.render('relatorios', { anuncios: anuncios })
+    },
 
 
-    }
+
+
 }

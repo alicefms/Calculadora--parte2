@@ -22,16 +22,43 @@
 
 
     <h2>Lista de anuncios</h2>
+    <% anuncios.forEach(anuncio=> { %>
+        <div class="anuncio">
+            <ul>
+                <li>Título do anúncio:<%= anuncio.titulo%>
+                </li>
+                <li>Cliente: <%= anuncio.cliente%>
+                </li>
+                <li>Data de início:<%=anuncio.datainicio %>
+                </li>
+                <li>Data de fim:<%= anuncio.datafim %>
+                </li>
+                <li>Investimento por dia:<%=anuncio.investimentod %>
+                </li>
+            </ul>
+
+            <div class="relatorio">
 
 
-    <ul>
-        <li>Valor Total Investido: <b id="reais"></b>
-        </li>
-        <li>Quantidade máxima de visualizações: <b id="viewsTotais"></b></li>
-        <li>Quantidade Máxima de cliques: <b id="clicksTotais"></b> </li>
-        <li>Quantidade Máxima de compartilhamentos: <b id="compaTotais"></b> </li>
-    </ul>
+                <ul>
+                    <li>Valor Total Investido: <%= anuncio.investimentototal%>
+                    </li>
+                    <li>Quantidade máxima de visualizações: <%= anuncio.viewstotais %>
+                    </li>
+                    <li>Quantidade Máxima de cliques: <%= anuncio.clickstotais%>
+                    </li>
+                    <li>Quantidade Máxima de compartilhamentos: <%= anuncio.compartilhamentostotais%>
+                    </li>
 
+                </ul>
+
+            </div>
+
+            <%})%>
+
+
+
+        </div>
 
 
 

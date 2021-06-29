@@ -10,7 +10,12 @@ const initDb = {
             cliente TEXT,
             datainicio TEXT ,
             datafim TEXT,
-            investimentod INTEGER
+            investimentod INTEGER,
+            qtedias INTEGER,
+            viewstotais INTEGER,
+            clickstotais INTEGER,
+            compartilhamentostotais INTEGER,
+            investimentototal INTEGER
         )`);
 
         await db.close()

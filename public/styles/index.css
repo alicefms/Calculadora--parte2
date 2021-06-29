@@ -62,3 +62,15 @@ input{
     display: flex;
     justify-content: space-between;
 }
+
+.lista{
+    display: grid;
+    grid-template-columns: 50% 50%;
+   border-style:solid;
+   border-color: cornflowerblue;
+   border-width: 1px;
+   margin-bottom: 10px;
+}
+.relatorio p{
+    line-height: 5px ;
+}

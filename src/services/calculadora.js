@@ -36,6 +36,10 @@ const geraRelatorio = (valor, qtedias) => {
     clicksTotais = clicksTotais + Math.floor(12 / 100 * views)
 
     const investimetoTotal = qtedias * valor
+    viewsTotais = viewsTotais * qtedias
+    clicksTotais = clicksTotais * qtedias
+    compaTotais = compaTotais * qtedias
+
     return { viewsTotais, clicksTotais, compaTotais, investimetoTotal }
 }
 

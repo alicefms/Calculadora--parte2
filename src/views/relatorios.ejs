@@ -7,11 +7,6 @@
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/styles/index.css">
-
-    <script src="/scripts/calculadora.js" defer type="module"></script>
-
-
-
 </head>
 
 <header>
@@ -21,46 +16,68 @@
 <body>
 
 
-    <h2>Lista de anuncios</h2>
+    <h2>Lista de anúncios</h2>
     <% anuncios.forEach(anuncio=> { %>
-        <div class="anuncio">
-            <ul>
-                <li>Título do anúncio:<%= anuncio.titulo%>
-                </li>
-                <li>Cliente: <%= anuncio.cliente%>
-                </li>
-                <li>Data de início:<%=anuncio.datainicio %>
-                </li>
-                <li>Data de fim:<%= anuncio.datafim %>
-                </li>
-                <li>Investimento por dia:<%=anuncio.investimentod %>
-                </li>
-            </ul>
 
-            <div class="relatorio">
-
-
+        <div class="lista">
+            <div class="anuncio">
                 <ul>
-                    <li>Valor Total Investido: <%= anuncio.investimentototal%>
+                    <li>Título do anúncio:<b>
+                            <%= anuncio.titulo%>
+                        </b>
                     </li>
-                    <li>Quantidade máxima de visualizações: <%= anuncio.viewstotais %>
+                    <li>Cliente: <%= anuncio.cliente%>
                     </li>
-                    <li>Quantidade Máxima de cliques: <%= anuncio.clickstotais%>
+                    <li>Data de início:<%=anuncio.datainicio %>
                     </li>
-                    <li>Quantidade Máxima de compartilhamentos: <%= anuncio.compartilhamentostotais%>
+                    <li>Data de fim:<%= anuncio.datafim %>
                     </li>
-
+                    <li>Investimento por dia: R$<%=anuncio.investimentod %>
+                    </li>
                 </ul>
 
             </div>
 
-            <%})%>
+            <div class="relatorio">
 
+                Valor Total Investido:<b> R$
+                    <%= anuncio.investimentototal%>
+                </b>
+                <p><b>Alcance MÁXIMO do anúncio:</b></p>
+                <p><b>
+                        <%= anuncio.viewstotais %>
+                    </b> visualizações; </p>
+                <p> <b>
+                        <%= anuncio.clickstotais%>
+                    </b> cliques;</p>
+                <p> <b>
+                        <%= anuncio.compartilhamentostotais%>
+                    </b> compartilhamentos.</p>
 
+                <!-- <ul>
+                    <li>Valor Total Investido:<b> R$
+                            <%= anuncio.investimentototal%>
+                        </b>
+                    </li>
+                    <li>Quantidade máxima de visualizações: <b>
+                            <%= anuncio.viewstotais %>
+                        </b>
+                    </li>
+                    <li>Quantidade Máxima de cliques:<b>
+                            <%= anuncio.clickstotais%>
+                        </b>
+                    </li>
+                    <li>Quantidade Máxima de compartilhamentos:<b>
+                            <%= anuncio.compartilhamentostotais%>
+                        </b>
+                    </li>
 
+                </ul> -->
+
+            </div>
         </div>
 
-
+        <%})%>
 
 </body>
 

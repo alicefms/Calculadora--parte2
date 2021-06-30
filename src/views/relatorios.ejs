@@ -18,11 +18,21 @@
 
     <h2>Lista de anúncios</h2>
 
-    <form id="filtro" action="/relatorio-filter" method="POST">
-        <label for-id="filtro">Filtrar por cliente</label>
-        <input type="text" id="filterclient" name="filterclient" placeholder="digite o cliente">
-        <input type="submit" class="submit" value="Filtrar">
-    </form>
+    <div class="filtros">
+
+        <form action="/relatorio-filtercliente" method="POST">
+            <label for-id="filtro">Filtrar por cliente</label>
+            <input type="text" name="filterclient" placeholder="digite o cliente">
+            <input type="submit" class="submit" value="Filtrar">
+        </form>
+
+        <form action="/relatorio-filterdata" method="POST">
+            <label for-id="data-inicio">Filtrar Por data</label>
+            <input type="date" name="filterdata">
+            <input type="submit" class="submit" value="Filtrar">
+        </form>
+
+    </div>
 
     <% anuncios.forEach(anuncio=> { %>
 

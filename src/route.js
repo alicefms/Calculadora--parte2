@@ -8,7 +8,8 @@ route.get('/cadastro', (req, res) => res.render('cadastro'))
 route.get('/relatorio', anuncioController.buscar)
 
 
-route.post('/relatorio-filter', anuncioController.filtrar)
+route.post('/relatorio-filtercliente', anuncioController.filtrarCliente)
+route.post('/relatorio-filterdata', anuncioController.filtrarData)
 
 
 route.post('/novocadastro', anuncioController.criar)

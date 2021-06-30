@@ -65,11 +65,23 @@ module.exports = {
     async buscar(req, res) {
         const db = await Database()
         const anuncios = await db.all(`SELECT * FROM anuncios`)
+        // const clientesRep = anuncios.map(anuncio => anuncio.cliente)
+        // const clientes = clientesRep.map(cliente => {
+        //     if (!clientes.includes(cliente)) {
+        //          clientes.push(cliente) }
+        // })
 
         res.render('relatorios', { anuncios: anuncios })
     },
 
+    async filtrar(req, res) {
+        const db = await Database()
+        const filterclient = req.body.filterclient
+        console.log(filterclient)
 
+        const anuncios = await db.all(`SELECT * FROM anuncios WHERE cliente = "${filterclient}"`)
+        res.render('relatorios', { anuncios: anuncios })
 
-
+    }
 }
+

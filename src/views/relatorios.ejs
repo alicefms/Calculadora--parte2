@@ -17,6 +17,13 @@
 
 
     <h2>Lista de anúncios</h2>
+
+    <form id="filtro" action="/relatorio-filter" method="POST">
+        <label for-id="filtro">Filtrar por cliente</label>
+        <input type="text" id="filterclient" name="filterclient" placeholder="digite o cliente">
+        <input type="submit" class="submit" value="Filtrar">
+    </form>
+
     <% anuncios.forEach(anuncio=> { %>
 
         <div class="lista">
@@ -54,30 +61,18 @@
                         <%= anuncio.compartilhamentostotais%>
                     </b> compartilhamentos.</p>
 
-                <!-- <ul>
-                    <li>Valor Total Investido:<b> R$
-                            <%= anuncio.investimentototal%>
-                        </b>
-                    </li>
-                    <li>Quantidade máxima de visualizações: <b>
-                            <%= anuncio.viewstotais %>
-                        </b>
-                    </li>
-                    <li>Quantidade Máxima de cliques:<b>
-                            <%= anuncio.clickstotais%>
-                        </b>
-                    </li>
-                    <li>Quantidade Máxima de compartilhamentos:<b>
-                            <%= anuncio.compartilhamentostotais%>
-                        </b>
-                    </li>
 
-                </ul> -->
 
             </div>
         </div>
 
+
         <%})%>
+
+
+
+
+
 
 </body>
 

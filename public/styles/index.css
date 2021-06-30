@@ -1,66 +1,77 @@
-.novocadastro form {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    
-}
+
 
 * {
     font-family:'Courier New', Courier, monospace;
     background:#fbf3e6;
 }
+
 body{
     margin: 20px;
 }
 
 header{
-    font-size: 20px;
-    font-weight: 900;
     margin-bottom: 30px;
     background:#e4b1a5;
-    align-items: center;
+    display: flex;
+    align-items: center;  
 }
+
 header img {
     width: 100px;
+}
+
+header p {
+    font-size: 30px;
+    font-weight: 900;
+    background:#e4b1a5;
 }
 
 button, .submit {
     background: rgb(136, 136, 248);
     font-size: 20px;
     border-radius: 8px;
-
 }
-.texto{
-    
+
+.novocadastro{   
+    align-items: center;
+    justify-content: center;
+}
+
+.novocadastro h2{
+    font-size: 30px;
+   text-align: center;
+}
+
+.novocadastro form {
+    display: grid;
+    align-items: center;
+    justify-content: center;   
+}
+
+.texto{    
   align-items: center;
   padding: 60px;
-  
 }
 
 .texto p{
-    font-size: 40px;
-    text-align: center;
-    
+    font-size: 35px;
+    text-align: center; 
+}
+.texto :nth-child(1){
+    font-size: 45px;
+    font-weight: 600;
 }
 
 input{
     background: white;
     margin-bottom: 20px;
 }
-.novocadastro{
-   
-    align-items: center;
-    justify-content: center;
-}
-.novocadastro p{
-    font-size: 30px;
-   text-align: center;
-}
 
 .voltar{
     position: fixed;
     bottom: 50px;
 }
+
 .buttons{
     display: flex;
     justify-content: space-between;
@@ -74,9 +85,11 @@ input{
    border-width: 1px;
    margin-bottom: 10px;
 }
+
 .relatorio p{
     line-height: 5px ;
 }
+
 .filtros{
     display: flex;
     justify-content: space-between;

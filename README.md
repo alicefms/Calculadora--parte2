@@ -1,21 +1,19 @@
 
 <h1 align="center">
-<img src="public/logo.png "></h1>
+<img src="public/images/banner.png"></h1>
 
 
-# Divulga Mais - agência
+# Divulga Tudo - agência
 
  * [Descrição](##Descrição)
  * [Estutura](##Estutura )
  * [Status do Projeto ](###StatusdoProjeto)
  * [Features](##Features)
  * [Demonstração](##Demonstração)
- * [Pré-requisitos e como rodar a aplicação](#Prerequisitos)
- * [Tecnologias utilizadas](#Tecnologias)
- * [Autora](#Autora)
+ * [Pré-requisitos e como rodar a aplicação](##Prerequisitos)
+ * [Tecnologias](##Tecnologias)
+ * [Autora](##Autora)
 
-
-     
 
 ## Descrição
 
@@ -42,8 +40,10 @@ Mas o anúncio só pode ser compartilhado 4 vezes, sendo uma vez pela anunciante
 
 Na pasta Views, estão os 3 arquivos ejs:
 index: a página inicial, onde estão os botões que levam para as paginas de cadastrar um novo anúncio  e de gerar relatórios. 
+
 cadastro: nesta página há um form com os inputs necessários para cadastrar um anúncio e um botão para voltar a pagina inicial. Quando o form é submetido, o anuncioController já pega os dados do body, chama uma função da calculadora e insere no Banco de dados.
-relatórios: nesta página é exibida, por meio de um forEach, uma lista dos anúncios com seus dados de alcance já calculados. 
+
+relatórios: nesta página é exibida, por meio de um forEach, uma lista dos anúncios com seus dados de alcance já calculados. També é possível filtrar os anúncios por cliente ou por data.
 
 
 ## Status do Projeto 
@@ -58,10 +58,27 @@ Projeto concluído e entregue.
 - [x] Exibição de relatórios dos anúncios
 - [x] Navegação entre as páginas
 - [x] Persistência dos dados
-- [ ] Aplicação de filtros
+- [x] Aplicação de filtros
 - [ ] Realização de testes
 
 ## Demonstração 
+Tela inicial:
+<img src="public/images/TelaInicial.PNG">
+<br /> 
+<br /> 
+<br /> 
+Tela de CAdastro de novos anúncios:
+<img src="public/images/telaCadastro.PNG">
+<br /> 
+<br /> 
+<br /> 
+Tela de Relatórios:
+<img src="public/images/telaRelatorios.PNG">
+<br /> 
+<br /> 
+<br /> 
+Este link leva a um post no meu LinkedIn, onde é possível ver um vídeo curto do sistema funcionando:
+https://bit.ly/AliceCAP
 
 
 ## Pré-requisitos e como rodar a aplicação
@@ -70,9 +87,9 @@ O projeto foi feito em node.
 Para executar o programa, é necessario ter instalado em sua máquina o Git e o Node.js.
 Para clonar este repositório em sua máquina, execute o comamndo:
 
-> git clone " *******************" ///-------------------------------------------------------------"
+> git clone https://github.com/alicefms/Calculadora--parte2.git
 
-depois, é necessário instalar os pacotes necessários:
+Depois, é preciso instalar os pacotes necessários:
 
 >npm install
 
@@ -87,17 +104,18 @@ Por fim, para rodar o projeto:
 O servidor iniciará na porta 3000, acesse <http://localhost:3000>
 
 
-## Tecnologias utilizadas
+## Tecnologias
 
 - nodeJS 
 - sqlite
 - JavaScript
+- HTML
 - CSS
 - Git
 
 
 ## Autora
-<h1> <img width=100px src= "public/foto.png" ></h1>
+<h1> <img width=100px src= "public/images/foto.png" ></h1>
 
 Alice de Fátima Moraes Souza
 

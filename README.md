@@ -17,9 +17,11 @@
 
 ## Descrição
 
-Projeto criado como requisito da seleção da Academia Capigemini
+Projeto criado como requisito da seleção da Academia Capigemini. 
 
 O projeto é de um sistema de uma agência de publicidade, onde é possível, na página inicial escolher entre cadastrar um anúncio ou gerar relátórios dos anúncios já cadastrados.
+
+Esta é a parte 2 do desafio. A parte 1 do está no repositório com arquivo único: https://github.com/alicefms/Calculadora
 
 
 ## Estutura 

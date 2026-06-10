@@ -2,12 +2,12 @@ name: jobs examples
 on:
   push
 jobs:
-  job1:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: step do job1
         run: echo Hello, world! job1.
-  job2:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: step do job2
